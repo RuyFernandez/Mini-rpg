@@ -128,7 +128,7 @@ function update(location) {
 }
 
 function goTown() {
-    update(locations);
+    update(locations[0]);
 }
 
 function goStore() {
@@ -203,7 +203,7 @@ function goFight() {
     monsterHealth = monsters[fighting].health;
     monsterStats.style.display = "block";
     monsterName.innerText = monsters[fighting].name;
-    monsterHealthText.innerText = monsterHealthText;
+    monsterHealthText.innerText = monsterHealth;
 }
 
 function attack(){
@@ -247,7 +247,7 @@ function dodge() {
 }
 
 function defeatMonster() {
-    gold += Math.floor(monsters[fighting].level*6.7);
+    gold += Math.floor(monsters[fighting].level * 6.7);
     xp += monsters[fighting].level;
     goldText.innerText = gold;
     xpText.innerText = xp;
